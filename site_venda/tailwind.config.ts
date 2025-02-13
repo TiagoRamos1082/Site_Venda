@@ -8,7 +8,10 @@ export default {
   ],
   theme: {
     extend: {
-      
+      fontFamily: {
+        arimo: ['"Arimo"', 'sans-serif'],
+        p_sans: ['"Public Sans"', 'sans-serif'],
+      },
     },
   },
   plugins: [],
