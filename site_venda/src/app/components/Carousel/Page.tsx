@@ -1,47 +1,9 @@
+// Componentes/Carroucel/Page.tsx
 import React from "react";
 import SimpleCard from "../SimpleCard/Page";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
-// Lista de produtos
-const produtos = [
-  {
-    title: "Camisa Preta",
-    price: "99,90",
-    image: "/camisa.png",
-    altText: "Imagem de uma camisa preta",
-    directionLink: "/produto/camisa-preta"
-  },
-  {
-    title: "Camisa Branca",
-    price: "89,90",
-    image: "/camisa.png",
-    altText: "Imagem de uma camisa branca",
-    directionLink: "/produto/camisa-branca"
-  },
-  {
-    title: "Camisa Azul",
-    price: "79,90",
-    image: "/camisa.png",
-    altText: "Imagem de uma camisa azul",
-    directionLink: "/produto/camisa-azul"
-  },
-  {
-    title: "Camisa Vermelha",
-    price: "109,90",
-    image: "/camisa.png",
-    altText: "Imagem de uma camisa vermelha",
-    directionLink: "/produto/camisa-vermelha"
-  },
-  {
-    title: "Camisa Verde",
-    price: "95,90",
-    image: "/camisa.png",
-    altText: "Imagem de uma camisa verde",
-    directionLink: "/produto/camisa-verde"
-  }
-];
 
 // Componente para cada slide
 function Carouselslide({ title, price, image, altText, directionLink }: any) {
@@ -56,10 +18,10 @@ function Carouselslide({ title, price, image, altText, directionLink }: any) {
   );
 }
 
-// Componente do carrossel
-export default function Carousel() {
+// Componente do carrossel que recebe os produtos como prop
+export default function Carousel({ produtos }: { produtos: any[] }) {
   const settings = {
-    dots: true, 
+    dots: true,
     infinite: true,
     autoplay: true,
     speed: 500,

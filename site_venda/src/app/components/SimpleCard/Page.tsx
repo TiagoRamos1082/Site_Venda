@@ -16,7 +16,7 @@ export default function SimpleCard({ title, price, image, altText, directionLink
         <img
           src={image}
           alt={altText}
-          className="w-1/2 h-1/2 object-cover"
+          className="w-1/2 h-96 object-cover"
         />
       </div>
       <h2 className="text-[#030712] font-bold text-xl mb-2">{title}</h2>

@@ -2,6 +2,7 @@
 
 import Carousel from "./components/Carousel/Page";
 
+import { listaProdutos1, listaProdutos2 } from "./products/produtos";
 
 
 
@@ -39,9 +40,15 @@ export default function Home() {
           </div>    
         </div>
         <div className="h-9/10 pt-28 flex flex-col gap-10">
-          <h1 className="text-5xl px-16" >LANÇAMENTOS</h1>
+          <h1 className="text-5xl px-16 underline underline-offset-8" >LANÇAMENTOS</h1>
           <div className="w-full px-16">
-            <Carousel></Carousel>
+            <Carousel produtos={listaProdutos1} />
+          </div>
+        </div>
+        <div className="h-9/10 pt-28 flex flex-col gap-10">
+          <h1 className="text-5xl px-16 underline underline-offset-8 ">DESTAQUES</h1>
+          <div className="w-full px-16">
+            <Carousel produtos={listaProdutos2} />
           </div>
         </div>
       </div>
